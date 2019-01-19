@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>&lt;e&gt;Judge</title>
+		<meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+		<link href="https://ejudge.it.kmitl.ac.th/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		<link href="https://ejudge.it.kmitl.ac.th/assets/fontawesome-free-5.0.13/web-fonts-with-css/css/fontawesome-all.min.css" rel="stylesheet" type="text/css" />
+		<link href="https://ejudge.it.kmitl.ac.th/assets/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+		<link href="https://ejudge.it.kmitl.ac.th/assets/css/AdminLTE.css" rel="stylesheet" type="text/css" />
+		<link href="https://ejudge.it.kmitl.ac.th/assets/img/favicon.ico?v=4" rel="shortcut icon" type="image/x-icon">
+		<style>
+			.btn-menu {text-align: left;padding-top: 0.7em!important;padding-bottom: 0.7em!important;}
+		</style>
+		    
+
+		
+
+		<script src="https://ejudge.it.kmitl.ac.th/assets/js/jquery-2.1.1.min.js"></script>
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+		<![endif]-->
+	</head>
+		<body class="skin-black">
+		<!-- header logo: style can be found in header.less -->
+		<header class="header">
+			<a href="https://ejudge.it.kmitl.ac.th" class="logo">
+				<!-- Add the class icon to your logo image or logo icon to add the margining -->
+				&lt;e&gt;Judge
+			</a>
+			<!-- Header Navbar: style can be found in header.less -->
+			<nav class="navbar navbar-static-top" role="navigation">
+				<!-- Sidebar toggle button-->
+				<a href="#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>
+				<div class="navbar-right">
+											<ul class="nav navbar-nav">
+						<!-- Messages: style can be found in dropdown.less-->
+						<li class="dropdown messages-menu">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+																	<i class="far fa-envelope"></i>
+															</a>
+							<ul class="dropdown-menu" style="width: 400px;">
+								<li class="header">You have 0 invitations</li>
+								<li>
+									<!-- inner menu: contains the actual data -->
+									<div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 200px;">
+										<ul class="menu" style="overflow: hidden; width: 100%; height: 200px;">
+																					<!-- end message -->
+										</ul>
+										<div class="slimScrollBar" style="width: 3px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 131.579px; background: rgb(0, 0, 0);"></div><div class="slimScrollRail" style="width: 3px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; opacity: 0.2; z-index: 90; right: 1px; background: rgb(51, 51, 51);"></div></div>
+								</li>
+								<!-- <li class="footer"><a href="#">See All Messages</a></li> -->
+							</ul>
+						</li>
+						<!-- Notifications: style can be found in dropdown.less -->
+						<li class="dropdown notifications-menu">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								<i class="fa fa-globe"></i>
+							</a>
+							<ul class="dropdown-menu">
+								<li class="header">You have 0 notifications</li>
+								<li>
+									<!-- inner menu: contains the actual data -->
+									<ul class="menu">
+										<li>
+											<p style="line-height:190px;text-align:center;color:#DBDBDB;font-weight:bold;font-size:124%">
+												Empty notification.
+											</p>
+										</li>
+									</ul>
+								</li>
+								<li class="footer"><a href="#">View all notifications</a></li>
+							</ul>
+						</li>
+						<!-- Tasks: style can be found in dropdown.less -->
+
+						<!-- User Account: style can be found in dropdown.less -->
+												<li class="dropdown user user-menu">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								<span>it61070040 <i class="caret"></i></span>
+							</a>
+							<ul class="dropdown-menu">
+								<!-- User image -->
+
+								<li class="user-header bg-black" style="padding-top: 20px">
+									<img src="https://ejudge.it.kmitl.ac.th/uploads/2002_1536863444_Kmc8LkTc.jpg" class="img-circle" alt="User Image">
+									<p>
+										นายชาญวิทย์ เศรษฐวงศ์สิน
+										<small>Member since August, 2018</small>
+									</p>
+								</li>
+								<!-- Menu Footer-->
+								<li class="user-footer" style="padding: 0px;">
+									<a href="https://ejudge.it.kmitl.ac.th/account" class="btn btn-default btn-flat btn-menu"><i class="fa fa-user"></i>  My Profile</a>
+									<a href="https://ejudge.it.kmitl.ac.th/account/2002/edit#changePassword" class="btn btn-default btn-flat btn-menu"><i class="fa fa-key"></i>  Change Password</a>
+								</li>
+								<li class="user-footer">
+									<div class="pull-right">
+										<a href="https://ejudge.it.kmitl.ac.th/auth/logout" class="btn btn-default btn-flat"><i class="fa fa-sign-out"></i>   Logout</a>
+									</div>
+								</li>
+							</ul>
+						</li>
+											</ul>									</div>
+			</nav>
+		</header>
+		<div class="wrapper row-offcanvas row-offcanvas-left">
+			<!-- Left side column. contains the logo and sidebar -->
+			<aside class="left-side sidebar-offcanvas">
+				<!-- sidebar: style can be found in sidebar.less -->
+				<section class="sidebar">
+											<!-- Sidebar user panel -->
+					<div class="user-panel">
+						<div class="pull-left image">
+							<img src="https://ejudge.it.kmitl.ac.th/uploads/2002_1536863444_Kmc8LkTc.jpg" class="img-circle" alt="User Image" style="max-width: 10em; text-align: center;">
+						</div>
+						<div class="pull-left info">
+							<p>นายชาญวิทย์ เศรษฐวงศ์สิน</p>
+							<a href="https://ejudge.it.kmitl.ac.th/useronline"><i class="fa fa-circle text-success"></i>
+																	9																User Online
+							</a>
+						</div>
+					</div>
+					<!-- search form -->
+					<form action="#" method="get" class="sidebar-form">
+						<div class="input-group">
+							<input type="text" name="q" class="form-control" placeholder="Search..."/>
+							<span class="input-group-btn">
+								<button type='submit' name='seach' id='search-btn' class="btn btn-flat"><i class="fa fa-search"></i></button>
+							</span>
+						</div>
+					</form>
+					<!-- /.search form -->
+					<!-- sidebar menu: : style can be found in sidebar.less -->
+					<ul class="sidebar-menu">
+						<li>
+							<a> <i class="glyphicon glyphicon-time"></i> <span id="clock">23:19:18</span></a>
+						</li>
+												<li class="treeview active">
+							<a href="#">
+								<i class="fa fa-tasks"></i>
+								<span>Course</span>
+								<i class="fa pull-right fa-angle-left"></i>
+							</a>
+							<ul class="treeview-menu">
+								<li>
+									<a href="https://ejudge.it.kmitl.ac.th/course">
+										<i class="fa fa-tasks"></i> All Courses
+									</a>
+								</li>
+																	<li>
+										<a href="https://ejudge.it.kmitl.ac.th/course/109">
+											<i class="fa fa-map-marker-alt"></i> Current Course
+										</a>
+									</li>
+																<li>
+									<a href="https://ejudge.it.kmitl.ac.th/course/109/leaderboard">
+										<i class="fa fa-trophy"></i> Leaderboard
+									</a>
+								</li>
+							</ul>
+						</li>
+																		<li class="treeview active">
+							<a href="#">
+								<i class="fa fa-code"></i>
+								<span>Problem</span>
+								<i class="fa pull-right fa-angle-left"></i>
+							</a>
+							<ul class="treeview-menu">
+								<li>
+									<a href="https://ejudge.it.kmitl.ac.th/problem">
+										<i class="fa fa-code"></i> View
+									</a>
+								</li>
+								<li>
+									<a href="https://ejudge.it.kmitl.ac.th/problem/submission">
+										<i class="fas fa-code-branch"></i> Submission
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="treeview active">
+							<a href="#">
+								<i class="fa fa-question"></i>
+								<span>Quiz</span>
+								<i class="fa pull-right fa-angle-left"></i>
+							</a>
+							<ul class="treeview-menu">
+								<li>
+									<a href="https://ejudge.it.kmitl.ac.th/quiz">
+										<i class="fa fa-question"></i> View
+									</a>
+								</li>
+								<li>
+									<a href="https://ejudge.it.kmitl.ac.th/quiz/submission">
+										<i class="fas fa-code-branch"></i> Submission
+									</a>
+								</li>
+							</ul>
+						</li>
+																	</ul>									</section>
+				<!-- /.sidebar -->
+			</aside>
+
+			<!-- Right side column. Contains the navbar and content of the page -->
+			<aside class="right-side">
+				<!-- Content Header (Page header) -->
+								<section class="content-header">
+					                    <h1>
+                        Grading
+                        <!-- <small>Write once ruins everywhere.</small> -->
+                    </h1>
+                    <ol class="breadcrumb">
+                        <li><a href="https://ejudge.it.kmitl.ac.th"><i class="fa fa-folder-open"></i> Home</a></li>
+                        <li><a href="https://ejudge.it.kmitl.ac.th/course">Course</a></li>
+                        <li><a href="https://ejudge.it.kmitl.ac.th/course/109">Computer Pro...</a></li>
+                        <li><a href="https://ejudge.it.kmitl.ac.th/problem">Problem</a></li>
+                        <li class="active">Grading</li>
+                    </ol>
+				</section>
+								<!-- Main content -->
+				<section class="content" style="width: 100%;">
+					                    <section class="col-lg-9">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                                            <div class="box">
+                                    <div class="box-header">
+                                        <h4 class="box-title">
+                                            <i class="fa fa-list-alt"></i> Description
+                                        </h4>
+                                    </div><!-- /.box-header -->
+                                    <div class="box-body">
+                                        <div class="box-body">
+                                                                                        เขียน Flowchart ของการรับค่าคะแนนมาเพื่อตัดเกรด โดยเกณฑ์การให้คะแนนมีดังนี้
+<ul>
+	<li>A = 80 &ndash; 100</li>
+	<li>B = 70 &ndash; 79</li>
+	<li>C = 60 &ndash; 69</li>
+	<li>D = 50 &ndash; 59</li>
+	<li>F = 0 - 49</li>
+</ul>
+
+                                        </div>
+                                    </div><!-- /.box-body -->
+                                    <div class="box-footer clearfix">
+                                        <div class="pull-right">
+                                            by <a href="https://ejudge.it.kmitl.ac.th/account/1292">นายภัสร์ศรัณ เอี่ยมอำไพ</a>
+                                            <br>
+                                            <small>
+                                                <em class="text-muted">16 January 2019, 22:20</em>
+                                            </small>
+                                        </div>
+                                    </div><!-- /.box-footer -->
+                                </div><!-- /.box -->
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="box">
+                                    <div class="box-header">
+                                        <h3 class="box-title">
+                                            <i class="fa fa-file-text-o"></i> Specification
+                                        </h3>
+                                    </div><!-- /.box-header -->
+                                    <div class="box-body table-responsive">
+                                        <table class="table table-case">
+                                            <thead>
+                                                <tr>
+                                                    <th width="50%">
+                                                        <i class="fa fa-sign-in"></i> Input Specification
+                                                    </th>
+                                                    <th width="50%">
+                                                        <i class="fa fa-sign-out"></i> Output Specification
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <br>
+                                                        จำนวนเต็ม n คะแนน
+                                                        <br>
+                                                    </td>
+                                                    <td>
+                                                        <br>
+                                                        เกรดที่ได้รับ
+                                                        <br>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div><!-- /.box -->
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="box">
+                                    <div class="box-header">
+                                        <h3 class="box-title">
+                                            <i class="fa fa-list-ol"></i> Sample Case
+                                        </h3>
+                                    </div><!-- /.box-header -->
+                                    <div class="box-body table-responsive">
+                                        <table class="table table-case table-hover">
+                                            <thead>
+                                            <tr>
+                                                <th width="50%">
+                                                    <i class="fa fa-sign-in"></i> Sample Input
+                                                </th>
+                                                <th width="50%">
+                                                    <i class="fa fa-sign-out"></i> Sample Output
+                                                </th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                                                                            <tr>
+                                                    <td>
+                                                        <pre>91</pre>
+                                                    </td>
+                                                    <td>
+                                                        <pre>A</pre>
+                                                    </td>
+                                                </tr>
+                                                                                            <tr>
+                                                    <td>
+                                                        <pre>71</pre>
+                                                    </td>
+                                                    <td>
+                                                        <pre>B</pre>
+                                                    </td>
+                                                </tr>
+                                                                                        </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box -->
+                        <div class="brython hidden">
+                            <div class="box" style="height: 100%">
+                                <div class="box-header">
+                                    <h3 class="box-title">
+                                        <i class="fa fa-code"></i> Editor <small>support only Python3 and C</small>
+                                    </h3>
+                                    <button class="btn btn-danger pull-right btn-exitfullscreen"><i class="fa fa-times"></i> Close</button>
+                                    <button class="btn btn-success pull-right btn-fullscreen"><i class="fa fa-expand"></i> Full Screen</button>
+
+                                </div><!-- /.box-header -->
+                                <div class="box-body" style="height: 100%">
+                                    <div>
+
+                                        <!-- Nav tabs -->
+                                        <ul class="nav nav-tabs" role="tablist">
+                                                                                                                                </ul>
+
+                                        <!-- Tab panes -->
+                                        <div class="tab-content">
+                                            <div role="tabpanel" class="tab-pane fade " id="brython">
+                                                                                            </div>
+                                            <div role="tabpanel" class="tab-pane fade " id="gcc">
+                                                                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div><!-- /.box -->
+                    </section><!-- /.end of main content -->
+                    <section class="col-lg-3">
+                                                <div class="row">
+                            <div class="col-xs-12">
+                                <div class="box">
+                                    <div class="box-header">
+                                        <h3 class="box-title">
+                                            <i class="fa fa-clock-o"></i> Time Remaining
+                                        </h3>
+                                    </div><!-- /.box-header -->
+                                    <div class="box-body">
+                                        <center>
+                                            <div>
+                                                <div id="lasttime" class="hidden"></div>
+                                                <div id="difftime" class="hidden"></div>
+                                                <table style="width: 100%; text-align: center;">
+                                                    <tbody>
+                                                    <tr>
+                                                        <td style="width: 20%;" id="days">
+                                                        </td>
+                                                        <td style="width: 20%;" id="hours">
+                                                        </td>
+                                                        <td style="width: 20%;" id="minutes">
+                                                        </td>
+                                                        <td style="width: 20%;" id="seconds">
+                                                        </td>
+                                                        <td style="width: 20%; vertical-align: bottom;" id="millisecs">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td id="dtext">Days</td>
+                                                        <td id="htext">Hours</td>
+                                                        <td id="mtext">Minutes</td>
+                                                        <td id="stext">Seconds</td>
+                                                        <td id="mstext"></td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </center>
+                                    </div><!-- /.box-body -->
+                                </div><!-- /.box -->
+                            </div>
+                        </div>
+                                                                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="box">
+                                    <div class="box-header">
+                                        <h3 class="box-title"><i class="fa fa-info"></i> Information</h3>
+                                    </div><!-- /.box-header -->
+                                    <div class="box-body">
+                                        <dl class="dl-horizontal sm">
+                                            <dt>Time Limit</dt>
+                                            <dd>1 Second</dd>
+                                            <dt>Memory Limit</dt>
+                                            <dd>32 MB</dd>
+                                            <dt>Language</dt>
+                                            <dd>rap</dd>
+                                            <dt>Deadline</dt>
+                                            <dd>20 January 2019, 23:59</dd>
+                                            <dt>Submission Limit</dt>
+                                            <dd><span class="label label-info">Unlimit</span></dd>
+                                            <dt>Restrict Word</dt>
+                                            <dd><span class="label label-info"
+                                                                                                >No Restrict</span></dd>
+                                            <dt>Required Word</dt>
+                                            <dd><span class="label label-info"
+                                                                                                      >No Restrict</span></dd>
+                                            <dt>Testcase</dt>
+                                            <dd>10 case</dd>
+                                            <dt>Rejudge Testcase</dt>
+                                            <dd>0 case</dd>
+                                            <dt>Full Score</dt>
+                                            <dd>100 Point</dd>
+                                            <dt>Bonus Score</dt>
+                                            <dd>0</dd>
+                                            <dt>Your Score</dt>
+                                            <dd>
+                                                                                            <a href="https://ejudge.it.kmitl.ac.th/problem/submission/786697" target="_blank">
+                                                    <p class="label label-success">
+                                                                                                            PPPPPPPPPP
+                                                                                                        </p>
+                                                </a>
+                                                                                        </dd>
+                                        </dl>
+                                    </div><!-- /.box-body -->
+                                </div><!-- /.box -->
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="box">
+                                    <div class="box-header">
+                                        <h3 class="box-title"><i class="fa fa-cloud-upload"></i> Submit File</h3>
+                                    </div><!-- /.box-header -->
+                                    <div class="box-body">
+                                        <form method="POST" action="https://ejudge.it.kmitl.ac.th/problem/4259/send" accept-charset="UTF-8" enctype="multipart/form-data"><input name="_token" type="hidden" value="VKNfneMITBJmInP176y9BFjV6umne1NhNcaNWEsr">
+                                            <div class="form-group">
+                                                <input type="file" id="file" name="file" class="form-control file">
+                                            </div>
+                                            <input type="hidden" id="codesubmmit" name="code" class="form-control">
+                                            <input type="hidden" id="langsubmmit" name="lang" class="form-control">
+                                            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                                        </form>
+                                    </div><!-- /.box-body -->
+                                </div><!-- /.box -->
+                            </div>
+                        </div>
+                    </section>
+                    				</section>
+			</aside><!-- /.right-side -->
+		</div><!-- ./wrapper -->
+
+	        <script src="https://ejudge.it.kmitl.ac.th/assets/js/bootstrap.min.js" type="text/javascript"></script>
+            
+        <script >// set the date we're counting down to
+        var target_date = new Date("Jan 20, 2019 23:59:59").getTime();
+        // variables for time units
+        var days, hours, minutes, seconds, millisecs;
+        $('#difftime').html(1547914758*1000 - $.now());
+        // get tag element
+        $('#lasttime').html($.now() + difftime);
+        // update the tag with id "countdown" every 1 second
+        var request = false;
+        function coutdownTime () {
+
+            // find the amount of "seconds" between now and target
+            var difftime = parseInt($('#difftime').html());
+            var lasttime = parseInt($('#lasttime').html());
+            var current_date = $.now()+ difftime;
+            $('#lasttime').html(current_date);
+            if(request === false && Math.abs(current_date-lasttime) > 2000){
+                clearInterval(timer);
+                request = true;
+                $.get( "/timems")
+                    .done(function( time ) {
+                        request = false;
+                        time = parseInt(time);
+                        difftime = time - $.now();
+                        current_date = $.now() + difftime;
+                        $('#difftime').html(difftime);
+                        $('#lasttime').html(current_date);
+                        timer = setInterval(coutdownTime, 69);
+                        console.log(time);
+
+                    })
+                    .fail(function( jqxhr, textStatus, error ) {
+                        request = false;
+                        console.log("Sync Time Fail");
+                    });
+                return;
+            }
+            var seconds_left = (target_date - current_date) / 1000;
+
+            // do some time calculations
+            days = parseInt(seconds_left / 86400);
+            seconds_left = seconds_left % 86400;
+
+            hours = parseInt(seconds_left / 3600);
+            seconds_left = seconds_left % 3600;
+
+            minutes = parseInt(seconds_left / 60);
+            seconds = parseInt(seconds_left % 60);
+
+            millisecs = parseInt((target_date - current_date) % 1000);
+
+            // format countdown string + set tag value
+            d = " Days ";
+            h = " Hours ";
+            m = " Minutes ";
+            s = " Seconds ";
+            if(seconds == "1" || seconds == "0"){ s = " Second "; }
+            if(minutes == "1" || minutes == "0"){ m = " Minute "; }
+            if(hours == "1" || hours == "0"){ h = " Hour "; }
+            if(days == "1" || days == "0"){ d = " Day "; }
+
+            if(hours<=0 && minutes<=0 && seconds<=0)
+            {
+                clearInterval(timer);
+                return;
+            }
+            else
+            {
+                document.getElementById("days").innerHTML = '<h2>'+days+'</h2>';
+                document.getElementById("hours").innerHTML = '<h2>'+hours+'</h2>';
+                document.getElementById("minutes").innerHTML = '<h2>'+minutes+'</h2>';
+                document.getElementById("seconds").innerHTML = '<h2>'+seconds+'</h2>';
+                document.getElementById("millisecs").innerHTML = '<h4>'+millisecs+'</h4>';
+                document.getElementById("dtext").innerHTML = d;
+                document.getElementById("htext").innerHTML = h;
+                document.getElementById("mtext").innerHTML = m;
+                document.getElementById("stext").innerHTML = s;
+            }
+        }
+        var timer = setInterval(coutdownTime, 69);
+    </script>
+            <script src="https://ejudge.it.kmitl.ac.th/assets/js/AdminLTE/app.js" type="text/javascript"></script>
+
+
+        <script type="text/javascript">
+            var now = new Date(1547914758000);
+            function startInterval(){
+                setInterval('updateTime();', 1000);
+            }
+            startInterval();
+            function updateTime(){
+                var nowMS = now.getTime();
+                nowMS += 1000;
+                now.setTime(nowMS);
+                var clock = document.getElementById('clock');
+                if(clock){
+                    clock.innerHTML = now.toTimeString().split(" ",1);
+                }
+            }
+        </script>
+                
+		</body>
+</html>
