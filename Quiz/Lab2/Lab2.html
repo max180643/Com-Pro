@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>&lt;e&gt;Judge</title>
+		<meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+		<link href="https://ejudge.it.kmitl.ac.th/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		<link href="https://ejudge.it.kmitl.ac.th/assets/fontawesome-free-5.0.13/web-fonts-with-css/css/fontawesome-all.min.css" rel="stylesheet" type="text/css" />
+		<link href="https://ejudge.it.kmitl.ac.th/assets/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+		<link href="https://ejudge.it.kmitl.ac.th/assets/css/AdminLTE.css" rel="stylesheet" type="text/css" />
+		<link href="https://ejudge.it.kmitl.ac.th/assets/img/favicon.ico?v=4" rel="shortcut icon" type="image/x-icon">
+		<style>
+			.btn-menu {text-align: left;padding-top: 0.7em!important;padding-bottom: 0.7em!important;}
+		</style>
+		
+		
+
+		<script src="https://ejudge.it.kmitl.ac.th/assets/js/jquery-2.1.1.min.js"></script>
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+		<![endif]-->
+	</head>
+		<body class="skin-black">
+		<!-- header logo: style can be found in header.less -->
+		<header class="header">
+			<a href="https://ejudge.it.kmitl.ac.th" class="logo">
+				<!-- Add the class icon to your logo image or logo icon to add the margining -->
+				&lt;e&gt;Judge
+			</a>
+			<!-- Header Navbar: style can be found in header.less -->
+			<nav class="navbar navbar-static-top" role="navigation">
+				<!-- Sidebar toggle button-->
+				<a href="#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>
+				<div class="navbar-right">
+											<ul class="nav navbar-nav">
+						<!-- Messages: style can be found in dropdown.less-->
+						<li class="dropdown messages-menu">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+																	<i class="far fa-envelope"></i>
+															</a>
+							<ul class="dropdown-menu" style="width: 400px;">
+								<li class="header">You have 0 invitations</li>
+								<li>
+									<!-- inner menu: contains the actual data -->
+									<div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 200px;">
+										<ul class="menu" style="overflow: hidden; width: 100%; height: 200px;">
+																					<!-- end message -->
+										</ul>
+										<div class="slimScrollBar" style="width: 3px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 131.579px; background: rgb(0, 0, 0);"></div><div class="slimScrollRail" style="width: 3px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; opacity: 0.2; z-index: 90; right: 1px; background: rgb(51, 51, 51);"></div></div>
+								</li>
+								<!-- <li class="footer"><a href="#">See All Messages</a></li> -->
+							</ul>
+						</li>
+						<!-- Notifications: style can be found in dropdown.less -->
+						<li class="dropdown notifications-menu">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								<i class="fa fa-globe"></i>
+							</a>
+							<ul class="dropdown-menu">
+								<li class="header">You have 0 notifications</li>
+								<li>
+									<!-- inner menu: contains the actual data -->
+									<ul class="menu">
+										<li>
+											<p style="line-height:190px;text-align:center;color:#DBDBDB;font-weight:bold;font-size:124%">
+												Empty notification.
+											</p>
+										</li>
+									</ul>
+								</li>
+								<li class="footer"><a href="#">View all notifications</a></li>
+							</ul>
+						</li>
+						<!-- Tasks: style can be found in dropdown.less -->
+
+						<!-- User Account: style can be found in dropdown.less -->
+												<li class="dropdown user user-menu">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								<span>it61070040 <i class="caret"></i></span>
+							</a>
+							<ul class="dropdown-menu">
+								<!-- User image -->
+
+								<li class="user-header bg-black" style="padding-top: 20px">
+									<img src="https://ejudge.it.kmitl.ac.th/uploads/2002_1536863444_Kmc8LkTc.jpg" class="img-circle" alt="User Image">
+									<p>
+										นายชาญวิทย์ เศรษฐวงศ์สิน
+										<small>Member since August, 2018</small>
+									</p>
+								</li>
+								<!-- Menu Footer-->
+								<li class="user-footer" style="padding: 0px;">
+									<a href="https://ejudge.it.kmitl.ac.th/account" class="btn btn-default btn-flat btn-menu"><i class="fa fa-user"></i>  My Profile</a>
+									<a href="https://ejudge.it.kmitl.ac.th/account/2002/edit#changePassword" class="btn btn-default btn-flat btn-menu"><i class="fa fa-key"></i>  Change Password</a>
+								</li>
+								<li class="user-footer">
+									<div class="pull-right">
+										<a href="https://ejudge.it.kmitl.ac.th/auth/logout" class="btn btn-default btn-flat"><i class="fa fa-sign-out"></i>   Logout</a>
+									</div>
+								</li>
+							</ul>
+						</li>
+											</ul>									</div>
+			</nav>
+		</header>
+		<div class="wrapper row-offcanvas row-offcanvas-left">
+			<!-- Left side column. contains the logo and sidebar -->
+			<aside class="left-side sidebar-offcanvas">
+				<!-- sidebar: style can be found in sidebar.less -->
+				<section class="sidebar">
+											<!-- Sidebar user panel -->
+					<div class="user-panel">
+						<div class="pull-left image">
+							<img src="https://ejudge.it.kmitl.ac.th/uploads/2002_1536863444_Kmc8LkTc.jpg" class="img-circle" alt="User Image" style="max-width: 10em; text-align: center;">
+						</div>
+						<div class="pull-left info">
+							<p>นายชาญวิทย์ เศรษฐวงศ์สิน</p>
+							<a href="https://ejudge.it.kmitl.ac.th/useronline"><i class="fa fa-circle text-success"></i>
+																	8																User Online
+							</a>
+						</div>
+					</div>
+					<!-- search form -->
+					<form action="#" method="get" class="sidebar-form">
+						<div class="input-group">
+							<input type="text" name="q" class="form-control" placeholder="Search..."/>
+							<span class="input-group-btn">
+								<button type='submit' name='seach' id='search-btn' class="btn btn-flat"><i class="fa fa-search"></i></button>
+							</span>
+						</div>
+					</form>
+					<!-- /.search form -->
+					<!-- sidebar menu: : style can be found in sidebar.less -->
+					<ul class="sidebar-menu">
+						<li>
+							<a> <i class="glyphicon glyphicon-time"></i> <span id="clock">00:08:03</span></a>
+						</li>
+												<li class="treeview active">
+							<a href="#">
+								<i class="fa fa-tasks"></i>
+								<span>Course</span>
+								<i class="fa pull-right fa-angle-left"></i>
+							</a>
+							<ul class="treeview-menu">
+								<li>
+									<a href="https://ejudge.it.kmitl.ac.th/course">
+										<i class="fa fa-tasks"></i> All Courses
+									</a>
+								</li>
+																	<li>
+										<a href="https://ejudge.it.kmitl.ac.th/course/109">
+											<i class="fa fa-map-marker-alt"></i> Current Course
+										</a>
+									</li>
+																<li>
+									<a href="https://ejudge.it.kmitl.ac.th/course/109/leaderboard">
+										<i class="fa fa-trophy"></i> Leaderboard
+									</a>
+								</li>
+							</ul>
+						</li>
+																		<li class="treeview active">
+							<a href="#">
+								<i class="fa fa-code"></i>
+								<span>Problem</span>
+								<i class="fa pull-right fa-angle-left"></i>
+							</a>
+							<ul class="treeview-menu">
+								<li>
+									<a href="https://ejudge.it.kmitl.ac.th/problem">
+										<i class="fa fa-code"></i> View
+									</a>
+								</li>
+								<li>
+									<a href="https://ejudge.it.kmitl.ac.th/problem/submission">
+										<i class="fas fa-code-branch"></i> Submission
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="treeview active">
+							<a href="#">
+								<i class="fa fa-question"></i>
+								<span>Quiz</span>
+								<i class="fa pull-right fa-angle-left"></i>
+							</a>
+							<ul class="treeview-menu">
+								<li>
+									<a href="https://ejudge.it.kmitl.ac.th/quiz">
+										<i class="fa fa-question"></i> View
+									</a>
+								</li>
+								<li>
+									<a href="https://ejudge.it.kmitl.ac.th/quiz/submission">
+										<i class="fas fa-code-branch"></i> Submission
+									</a>
+								</li>
+							</ul>
+						</li>
+																	</ul>									</section>
+				<!-- /.sidebar -->
+			</aside>
+
+			<!-- Right side column. Contains the navbar and content of the page -->
+			<aside class="right-side">
+				<!-- Content Header (Page header) -->
+								<section class="content-header">
+										<h1>
+						GDB Lab 2
+						<small>Write once ruins everywhere.</small>
+					</h1>
+					<ol class="breadcrumb">
+						<li><a href="https://ejudge.it.kmitl.ac.th"><i class="fa fa-folder-open"></i> Home</a></li>
+						<li><a href="https://ejudge.it.kmitl.ac.th/course">Course</a></li>
+						<li><a href="https://ejudge.it.kmitl.ac.th/course/109">Computer Pro...</a></li>
+						<li><a href="https://ejudge.it.kmitl.ac.th/quiz">Quiz</a></li>
+						<li class="active">GDB Lab 2</li>
+					</ol>
+				</section>
+								<!-- Main content -->
+				<section class="content" style="width: 100%;">
+										<div class="row">
+						<div class="col-xs-12">
+												</div>
+					</div>
+					<div class="row">
+											<div class="col-xs-12">
+												<div class="box">
+								<div class="box-header">
+									<h4 class="box-title">
+										<i class="fa fa-list-alt"></i> Description
+									</h4>
+								</div><!-- /.box-header -->
+								<div class="box-body">
+									<div class="box-body">
+										<span style="font-size:16px"><span style="font-size:18px"><strong>คำชี้แจง</strong></span><br />
+- ให้ใช้โปรแกรม gdb ในการหาคำตอบในแต่ละข้อ<br />
+- ให้ตอบเป็นตัวเลขเท่านั้น<br />
+- ข้อไหนที่เป็น statement เดี่ยว ๆ โดยไม่มีการกำหนดค่าให้ตัวแปร ให้ใช้ <strong><em>p &lt;statement&gt;&nbsp;</em></strong>ในการปริ้นท์ และนำค่าที่ได้มาใส่ได้เลย</span><br />
+<br />
+เมื่อกำหนดค่าตัวแปรต่างๆ ตามตัวอย่างโค๊ดด้านล่าง จงหาค่าในแต่ละข้อ โดยทำทีละข้อ
+<pre>
+#include &quot;stdio.h&quot;
+
+int main() {
+    int i=5, j=36;
+    float x=0.001, y=0.00, z=-81.753;
+    char c=&#39;z&#39;, d=&#39;M&#39;;
+
+    // Assignment Statements of each question
+
+    return 0;
+}
+</pre>
+
+									</div>
+								</div><!-- /.box-body -->
+								<div class="box-footer clearfix">
+									<div class="pull-right">
+										by <a href="https://ejudge.it.kmitl.ac.th/account/566">นายนนท์ปวิธ ธีรเชษฐมงคล</a>
+										<br>
+										<small>
+											<em class="text-muted">31 January 2019, 21:01</em>
+										</small>
+									</div>
+								</div><!-- /.box-footer -->
+							</div><!-- /.box -->
+						</div>
+										</div>
+
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="box">
+								<div class="box-header">
+									<h4 class="box-title">
+										<i class="fa fa-list-ol"></i> Question
+									</h4>
+								</div><!-- /.box-header -->
+								<div class="box-body">
+									<div>
+										<ul class="list-inline question-tab" role="tablist">
+																																	<li>
+																							<a href="#question-123" class="btn btn-default" role="tab" data-toggle="tab">
+													1
+												</a>
+											</li>
+																						<li>
+																							<a href="#question-128" class="btn btn-default" role="tab" data-toggle="tab">
+													2
+												</a>
+											</li>
+																						<li>
+																							<a href="#question-124" class="btn btn-default" role="tab" data-toggle="tab">
+													3
+												</a>
+											</li>
+																						<li>
+																							<a href="#question-120" class="btn btn-default" role="tab" data-toggle="tab">
+													4
+												</a>
+											</li>
+																						<li>
+																							<a href="#question-125" class="btn btn-default" role="tab" data-toggle="tab">
+													5
+												</a>
+											</li>
+																						<li>
+																							<a href="#question-119" class="btn btn-default" role="tab" data-toggle="tab">
+													6
+												</a>
+											</li>
+																						<li>
+																							<a href="#question-121" class="btn btn-default" role="tab" data-toggle="tab">
+													7
+												</a>
+											</li>
+																						<li>
+																							<a href="#question-122" class="btn btn-default" role="tab" data-toggle="tab">
+													8
+												</a>
+											</li>
+																						<li>
+																							<a href="#question-126" class="btn btn-default" role="tab" data-toggle="tab">
+													9
+												</a>
+											</li>
+																						<li>
+																							<a href="#question-127" class="btn btn-default" role="tab" data-toggle="tab">
+													10
+												</a>
+											</li>
+																					</ul>
+									</div>
+									<br><br>
+									<form method="POST" action="https://ejudge.it.kmitl.ac.th/quiz/53/save" accept-charset="UTF-8" class="form-save"><input name="_token" type="hidden" value="UtHrNew8Xkd3qj5QzRx2ysLgT2ZmKanF6HL0MRnz">
+										<div class="question-content tab-content">
+											<div class="tab-pane active" id="question-0">
+												<p style="font-size:32px;font-weight:bold;text-align:center;padding:40px;color:rgba(0, 0, 0, 0.175)">
+													Select your question!
+												</p>
+											</div>
+																						<div class="tab-pane" id="question-123">
+												<div>
+																									<span class="label label-default">1</span><br><br>
+																									<pre>
+z/j</pre>
+คำตอบคือ&nbsp;<textarea name="answer[123][]" cols="15" rows="1"></textarea>
+												</div>
+											</div>
+																						<div class="tab-pane" id="question-128">
+												<div>
+																									<span class="label label-default">2</span><br><br>
+																									<pre>
+(x*j) &gt;= (z*i)</pre>
+คำตอบคือ&nbsp;<textarea name="answer[128][]" cols="10" rows="1"></textarea>
+
+<div>&nbsp;
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+</div>
+
+												</div>
+											</div>
+																						<div class="tab-pane" id="question-124">
+												<div>
+																									<span class="label label-default">3</span><br><br>
+																									<pre>
+y=x=z-j</pre>
+j มีค่า&nbsp;<textarea name="answer[124][]" cols="10" rows="1"></textarea>
+
+<div>x มีค่า&nbsp;<textarea name="answer[124][]" cols="15" rows="1"></textarea><br />
+y มีค่า&nbsp;<textarea name="answer[124][]" cols="15" rows="1"></textarea>
+
+<div>z มีค่า&nbsp;<textarea name="answer[124][]" cols="15" rows="1"></textarea></div>
+</div>
+
+<div>&nbsp;
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+</div>
+
+												</div>
+											</div>
+																						<div class="tab-pane" id="question-120">
+												<div>
+																									<span class="label label-default">4</span><br><br>
+																									<pre>
+i=c%j</pre>
+c มีค่า&nbsp;<textarea name="answer[120][]" cols="7" rows="1"></textarea><br />
+i มีค่า&nbsp;<textarea name="answer[120][]" cols="7" rows="1"></textarea><br />
+j มีค่า&nbsp;<textarea name="answer[120][]" cols="7" rows="1"></textarea>
+												</div>
+											</div>
+																						<div class="tab-pane" id="question-125">
+												<div>
+																									<span class="label label-default">5</span><br><br>
+																									<pre>
+(y-x)&gt;=z</pre>
+คำตอบคือ&nbsp;<textarea name="answer[125][]" cols="10" rows="1"></textarea>
+
+<div>&nbsp;
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+</div>
+
+												</div>
+											</div>
+																						<div class="tab-pane" id="question-119">
+												<div>
+																									<span class="label label-default">6</span><br><br>
+																									<pre>
+c=i+=j</pre>
+c มีค่า&nbsp;<textarea name="answer[119][]" cols="7" rows="1"></textarea><br />
+i มีค่า&nbsp;<textarea name="answer[119][]" cols="7" rows="1"></textarea><br />
+j มีค่า&nbsp;<textarea name="answer[119][]" cols="7" rows="1"></textarea>
+												</div>
+											</div>
+																						<div class="tab-pane" id="question-121">
+												<div>
+																									<span class="label label-default">7</span><br><br>
+																									<pre>
+j*=(int)(x+z)/2</pre>
+j มีค่า&nbsp;<textarea name="answer[121][]" cols="15" rows="1"></textarea><br />
+x มีค่า&nbsp;<textarea name="answer[121][]" cols="15" rows="1"></textarea><br />
+z มีค่า&nbsp;<textarea name="answer[121][]" cols="15" rows="1"></textarea>
+												</div>
+											</div>
+																						<div class="tab-pane" id="question-122">
+												<div>
+																									<span class="label label-default">8</span><br><br>
+																									<pre>
+y-=(c+d)/i+x</pre>
+y มีค่า&nbsp;<textarea name="answer[122][]" cols="19" rows="1"></textarea>
+												</div>
+											</div>
+																						<div class="tab-pane" id="question-126">
+												<div>
+																									<span class="label label-default">9</span><br><br>
+																									<pre>
+j*(i-7)&gt;(y-2)</pre>
+คำตอบคือ&nbsp;<textarea name="answer[126][]" cols="10" rows="1"></textarea>
+
+<div>&nbsp;
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+</div>
+&nbsp;
+												</div>
+											</div>
+																						<div class="tab-pane" id="question-127">
+												<div>
+																									<span class="label label-default">10</span><br><br>
+																									<pre>
+(d &lt;= &#39;a&#39;) &amp;&amp; (&#39;A&#39; &gt;= c-30)</pre>
+คำตอบคือ&nbsp;<textarea name="answer[127][]" cols="10" rows="1"></textarea>
+
+<div>&nbsp;
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+</div>
+
+												</div>
+											</div>
+																					</div>
+									</form>
+																	</div>
+								<div class="box-footer clearfix">
+									<div class="pull-right">
+										<button type="button" class="btn btn-info btn-save">
+											<i class="fa fa-save"></i>
+											Save
+										</button>
+										&nbsp;&nbsp;&nbsp;&nbsp;
+																				<button type="button" class="btn btn-success" disabled>
+											<i class="fa fa-send"></i>
+											Submit
+										</button>
+																			</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal fade" id="submitConfirm" tabindex="-1" role="dialog" aria-hidden="true">
+						<div class="modal-dialog modal-sm">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal">
+										<span aria-hidden="true">&times;</span>
+										<span class="sr-only">Close</span>
+									</button>
+									<h4 class="modal-title">Confirmation</h4>
+								</div>
+								<div class="modal-body">
+									<h4>
+										Are you sure ?
+																																																									<span class="label label-danger">1</span>
+																																																	<span class="label label-danger">2</span>
+																																																	<span class="label label-danger">3</span>
+																																																	<span class="label label-danger">4</span>
+																																																	<span class="label label-danger">5</span>
+																																																	<span class="label label-danger">6</span>
+																																																	<span class="label label-danger">7</span>
+																																																	<span class="label label-danger">8</span>
+																																																	<span class="label label-danger">9</span>
+																																																	<span class="label label-danger">10</span>
+																												</h4>
+									<br>
+									<br>
+								</div>
+								<div class="modal-footer">
+									<form method="POST" action="https://ejudge.it.kmitl.ac.th/quiz/53/send" accept-charset="UTF-8" class="form-inline final-confirm"><input name="_token" type="hidden" value="UtHrNew8Xkd3qj5QzRx2ysLgT2ZmKanF6HL0MRnz">
+										<button type="submit" class="btn btn-success form-submit" onclick="return confirm('Are you really sure?')">
+											<i class="fa fa-send"></i>
+											Submit
+										</button>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+									</section>
+			</aside><!-- /.right-side -->
+		</div><!-- ./wrapper -->
+
+	        <script src="https://ejudge.it.kmitl.ac.th/assets/js/bootstrap.min.js" type="text/javascript"></script>
+        					
+					<script>
+						var saveUrl = 'https://ejudge.it.kmitl.ac.th/quiz/53/send';
+						$('.btn-save').click(function () {
+							$('.form-save').submit();
+						});
+					</script>
+	        <script src="https://ejudge.it.kmitl.ac.th/assets/js/AdminLTE/app.js" type="text/javascript"></script>
+
+
+        <script type="text/javascript">
+            var now = new Date(1549213683000);
+            function startInterval(){
+                setInterval('updateTime();', 1000);
+            }
+            startInterval();
+            function updateTime(){
+                var nowMS = now.getTime();
+                nowMS += 1000;
+                now.setTime(nowMS);
+                var clock = document.getElementById('clock');
+                if(clock){
+                    clock.innerHTML = now.toTimeString().split(" ",1);
+                }
+            }
+        </script>
+                
+		</body>
+</html>
