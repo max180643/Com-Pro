@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>&lt;e&gt;Judge</title>
+		<meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+		<link href="https://ejudge.it.kmitl.ac.th/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		<link href="https://ejudge.it.kmitl.ac.th/assets/fontawesome-free-5.0.13/web-fonts-with-css/css/fontawesome-all.min.css" rel="stylesheet" type="text/css" />
+		<link href="https://ejudge.it.kmitl.ac.th/assets/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+		<link href="https://ejudge.it.kmitl.ac.th/assets/css/AdminLTE.css" rel="stylesheet" type="text/css" />
+		<link href="https://ejudge.it.kmitl.ac.th/assets/img/favicon.ico?v=4" rel="shortcut icon" type="image/x-icon">
+		<style>
+			.btn-menu {text-align: left;padding-top: 0.7em!important;padding-bottom: 0.7em!important;}
+		</style>
+		        
+
+    <style>
+        .terminal {
+            border: 2px solid black;
+            font-family: courier,fixed,swiss,monospace,sans-serif;
+            font-size: 14px;
+            color: #bbbbbb;
+            background: #000000;
+            border-collapse: collapse;
+            line-height: normal;
+        }
+
+    </style>
+
+		
+
+		<script src="https://ejudge.it.kmitl.ac.th/assets/js/jquery-2.1.1.min.js"></script>
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+		<![endif]-->
+	</head>
+		<body class="skin-black">
+		<!-- header logo: style can be found in header.less -->
+		<header class="header">
+			<a href="https://ejudge.it.kmitl.ac.th" class="logo">
+				<!-- Add the class icon to your logo image or logo icon to add the margining -->
+				&lt;e&gt;Judge
+			</a>
+			<!-- Header Navbar: style can be found in header.less -->
+			<nav class="navbar navbar-static-top" role="navigation">
+				<!-- Sidebar toggle button-->
+				<a href="#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>
+				<div class="navbar-right">
+											<ul class="nav navbar-nav">
+						<!-- Messages: style can be found in dropdown.less-->
+						<li class="dropdown messages-menu">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+																	<i class="far fa-envelope"></i>
+															</a>
+							<ul class="dropdown-menu" style="width: 400px;">
+								<li class="header">You have 0 invitations</li>
+								<li>
+									<!-- inner menu: contains the actual data -->
+									<div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 200px;">
+										<ul class="menu" style="overflow: hidden; width: 100%; height: 200px;">
+																					<!-- end message -->
+										</ul>
+										<div class="slimScrollBar" style="width: 3px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 131.579px; background: rgb(0, 0, 0);"></div><div class="slimScrollRail" style="width: 3px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; opacity: 0.2; z-index: 90; right: 1px; background: rgb(51, 51, 51);"></div></div>
+								</li>
+								<!-- <li class="footer"><a href="#">See All Messages</a></li> -->
+							</ul>
+						</li>
+						<!-- Notifications: style can be found in dropdown.less -->
+						<li class="dropdown notifications-menu">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								<i class="fa fa-globe"></i>
+							</a>
+							<ul class="dropdown-menu">
+								<li class="header">You have 0 notifications</li>
+								<li>
+									<!-- inner menu: contains the actual data -->
+									<ul class="menu">
+										<li>
+											<p style="line-height:190px;text-align:center;color:#DBDBDB;font-weight:bold;font-size:124%">
+												Empty notification.
+											</p>
+										</li>
+									</ul>
+								</li>
+								<li class="footer"><a href="#">View all notifications</a></li>
+							</ul>
+						</li>
+						<!-- Tasks: style can be found in dropdown.less -->
+
+						<!-- User Account: style can be found in dropdown.less -->
+												<li class="dropdown user user-menu">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								<span>it61070040 <i class="caret"></i></span>
+							</a>
+							<ul class="dropdown-menu">
+								<!-- User image -->
+
+								<li class="user-header bg-black" style="padding-top: 20px">
+									<img src="https://ejudge.it.kmitl.ac.th/uploads/2002_1536863444_Kmc8LkTc.jpg" class="img-circle" alt="User Image">
+									<p>
+										นายชาญวิทย์ เศรษฐวงศ์สิน
+										<small>Member since August, 2018</small>
+									</p>
+								</li>
+								<!-- Menu Footer-->
+								<li class="user-footer" style="padding: 0px;">
+									<a href="https://ejudge.it.kmitl.ac.th/account" class="btn btn-default btn-flat btn-menu"><i class="fa fa-user"></i>  My Profile</a>
+									<a href="https://ejudge.it.kmitl.ac.th/account/2002/edit#changePassword" class="btn btn-default btn-flat btn-menu"><i class="fa fa-key"></i>  Change Password</a>
+								</li>
+								<li class="user-footer">
+									<div class="pull-right">
+										<a href="https://ejudge.it.kmitl.ac.th/auth/logout" class="btn btn-default btn-flat"><i class="fa fa-sign-out"></i>   Logout</a>
+									</div>
+								</li>
+							</ul>
+						</li>
+											</ul>									</div>
+			</nav>
+		</header>
+		<div class="wrapper row-offcanvas row-offcanvas-left">
+			<!-- Left side column. contains the logo and sidebar -->
+			<aside class="left-side sidebar-offcanvas">
+				<!-- sidebar: style can be found in sidebar.less -->
+				<section class="sidebar">
+											<!-- Sidebar user panel -->
+					<div class="user-panel">
+						<div class="pull-left image">
+							<img src="https://ejudge.it.kmitl.ac.th/uploads/2002_1536863444_Kmc8LkTc.jpg" class="img-circle" alt="User Image" style="max-width: 10em; text-align: center;">
+						</div>
+						<div class="pull-left info">
+							<p>นายชาญวิทย์ เศรษฐวงศ์สิน</p>
+							<a href="https://ejudge.it.kmitl.ac.th/useronline"><i class="fa fa-circle text-success"></i>
+																	5																User Online
+							</a>
+						</div>
+					</div>
+					<!-- search form -->
+					<form action="#" method="get" class="sidebar-form">
+						<div class="input-group">
+							<input type="text" name="q" class="form-control" placeholder="Search..."/>
+							<span class="input-group-btn">
+								<button type='submit' name='seach' id='search-btn' class="btn btn-flat"><i class="fa fa-search"></i></button>
+							</span>
+						</div>
+					</form>
+					<!-- /.search form -->
+					<!-- sidebar menu: : style can be found in sidebar.less -->
+					<ul class="sidebar-menu">
+						<li>
+							<a> <i class="glyphicon glyphicon-time"></i> <span id="clock">10:02:28</span></a>
+						</li>
+												<li class="treeview active">
+							<a href="#">
+								<i class="fa fa-tasks"></i>
+								<span>Course</span>
+								<i class="fa pull-right fa-angle-left"></i>
+							</a>
+							<ul class="treeview-menu">
+								<li>
+									<a href="https://ejudge.it.kmitl.ac.th/course">
+										<i class="fa fa-tasks"></i> All Courses
+									</a>
+								</li>
+																	<li>
+										<a href="https://ejudge.it.kmitl.ac.th/course/109">
+											<i class="fa fa-map-marker-alt"></i> Current Course
+										</a>
+									</li>
+																<li>
+									<a href="https://ejudge.it.kmitl.ac.th/course/109/leaderboard">
+										<i class="fa fa-trophy"></i> Leaderboard
+									</a>
+								</li>
+							</ul>
+						</li>
+																		<li class="treeview active">
+							<a href="#">
+								<i class="fa fa-code"></i>
+								<span>Problem</span>
+								<i class="fa pull-right fa-angle-left"></i>
+							</a>
+							<ul class="treeview-menu">
+								<li>
+									<a href="https://ejudge.it.kmitl.ac.th/problem">
+										<i class="fa fa-code"></i> View
+									</a>
+								</li>
+								<li>
+									<a href="https://ejudge.it.kmitl.ac.th/problem/submission">
+										<i class="fas fa-code-branch"></i> Submission
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="treeview active">
+							<a href="#">
+								<i class="fa fa-question"></i>
+								<span>Quiz</span>
+								<i class="fa pull-right fa-angle-left"></i>
+							</a>
+							<ul class="treeview-menu">
+								<li>
+									<a href="https://ejudge.it.kmitl.ac.th/quiz">
+										<i class="fa fa-question"></i> View
+									</a>
+								</li>
+								<li>
+									<a href="https://ejudge.it.kmitl.ac.th/quiz/submission">
+										<i class="fas fa-code-branch"></i> Submission
+									</a>
+								</li>
+							</ul>
+						</li>
+																	</ul>									</section>
+				<!-- /.sidebar -->
+			</aside>
+
+			<!-- Right side column. Contains the navbar and content of the page -->
+			<aside class="right-side">
+				<!-- Content Header (Page header) -->
+								<section class="content-header">
+					                    <h1>
+                        Lab5-5
+                        <!-- <small>Write once ruins everywhere.</small> -->
+                    </h1>
+                    <ol class="breadcrumb">
+                        <li><a href="https://ejudge.it.kmitl.ac.th"><i class="fa fa-folder-open"></i> Home</a></li>
+                        <li><a href="https://ejudge.it.kmitl.ac.th/course">Course</a></li>
+                        <li><a href="https://ejudge.it.kmitl.ac.th/course/109">Computer Pro...</a></li>
+                        <li><a href="https://ejudge.it.kmitl.ac.th/problem">Problem</a></li>
+                        <li class="active">Lab5-5</li>
+                    </ol>
+				</section>
+								<!-- Main content -->
+				<section class="content" style="width: 100%;">
+					                    <section class="col-lg-9">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                                            <div class="box">
+                                    <div class="box-header">
+                                        <h4 class="box-title">
+                                            <i class="fa fa-list-alt"></i> Description
+                                        </h4>
+                                    </div><!-- /.box-header -->
+                                    <div class="box-body">
+                                        <div class="box-body">
+                                                                                        จงเขียนโปรแกรมรับค่าจำนวนเต็ม N เข้ามา โดยมีเงื่อนไขดังนี้
+<ul>
+	<li>ถ้า N เป็นเลขคี่ ให้ขึ้นว่า error แล้วให้ป้อนค่าใหม่</li>
+	<li>ถ้า N เป็นเลขคู่ แต่ค่าน้อยกว่า 2 ให้ขึ้นว่า error&nbsp;แล้วให้ป้อนค่าใหม่</li>
+	<li>ถ้า N เป็นเลขคู่ ให้แบ่งครึ่ง แล้วแสดงค่าจากน้อยไปมากและมากไปน้อย</li>
+</ul>
+
+                                        </div>
+                                    </div><!-- /.box-body -->
+                                    <div class="box-footer clearfix">
+                                        <div class="pull-right">
+                                            by <a href="https://ejudge.it.kmitl.ac.th/account/566">นายนนท์ปวิธ ธีรเชษฐมงคล</a>
+                                            <br>
+                                            <small>
+                                                <em class="text-muted">14 February 2019, 00:33</em>
+                                            </small>
+                                        </div>
+                                    </div><!-- /.box-footer -->
+                                </div><!-- /.box -->
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="box">
+                                    <div class="box-header">
+                                        <h3 class="box-title">
+                                            <i class="fa fa-file-text-o"></i> Specification
+                                        </h3>
+                                    </div><!-- /.box-header -->
+                                    <div class="box-body table-responsive">
+                                        <table class="table table-case">
+                                            <thead>
+                                                <tr>
+                                                    <th width="50%">
+                                                        <i class="fa fa-sign-in"></i> Input Specification
+                                                    </th>
+                                                    <th width="50%">
+                                                        <i class="fa fa-sign-out"></i> Output Specification
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <br>
+                                                        จำนวนเต็ม N
+                                                        <br>
+                                                    </td>
+                                                    <td>
+                                                        <br>
+                                                        ตามเงื่อนไขข้างบน สามารถดูตัวอย่างได้จาก Sample Output
+                                                        <br>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div><!-- /.box -->
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="box">
+                                    <div class="box-header">
+                                        <h3 class="box-title">
+                                            <i class="fa fa-list-ol"></i> Sample Case
+                                        </h3>
+                                    </div><!-- /.box-header -->
+                                    <div class="box-body table-responsive">
+                                        <table class="table table-case table-hover">
+                                            <thead>
+                                            <tr>
+                                                <th width="50%">
+                                                    <i class="fa fa-sign-in"></i> Sample Input
+                                                </th>
+                                                <th width="50%">
+                                                    <i class="fa fa-sign-out"></i> Sample Output
+                                                </th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                                                                            <tr>
+                                                    <td>
+                                                        <pre>1
+3
+10</pre>
+                                                    </td>
+                                                    <td>
+                                                        <pre>error
+error
+1234554321</pre>
+                                                    </td>
+                                                </tr>
+                                                                                        </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box -->
+                        <div class="brython hidden">
+                            <div class="box" style="height: 100%">
+                                <div class="box-header">
+                                    <h3 class="box-title">
+                                        <i class="fa fa-code"></i> Editor <small>support only Python3 and C</small>
+                                    </h3>
+                                    <button class="btn btn-danger pull-right btn-exitfullscreen"><i class="fa fa-times"></i> Close</button>
+                                    <button class="btn btn-success pull-right btn-fullscreen"><i class="fa fa-expand"></i> Full Screen</button>
+
+                                </div><!-- /.box-header -->
+                                <div class="box-body" style="height: 100%">
+                                    <div>
+
+                                        <!-- Nav tabs -->
+                                        <ul class="nav nav-tabs" role="tablist">
+                                                                                                                                        <li role="presentation" class="active"><a href="#gcc" aria-controls="gcc" role="tab" data-toggle="tab">C</a></li>
+                                                                                    </ul>
+
+                                        <!-- Tab panes -->
+                                        <div class="tab-content">
+                                            <div role="tabpanel" class="tab-pane fade " id="brython">
+                                                                                            </div>
+                                            <div role="tabpanel" class="tab-pane fade in active" id="gcc">
+                                                                                                <!-- brython editor -->
+                                                    <br><button class="btn btn-info btn-judge-c"><i class="fa fa-legal"></i> Judge</button>
+<div class="row" style="height: 100%;padding-top: 1em">
+    <div class="col-md-6" style="height: 100%">
+        <div id="code" style="height: 388px; margin-top: 2px">
+        </div>
+
+        <select id="lang" onchange='editor.setValue("");editor.getSession().setMode("ace/mode/"+this.options[this.selectedIndex].value)'>
+            <option value="c_cpp">gcc</option>
+            <option value="lua">lua</option>
+            <option value="perl">perl</option>
+            <option value="php">php</option>
+            <option value="python">python 2.7</option>
+            <option value="ruby">ruby</option>
+            <option value="sh">sh</option>
+        </select> options:<input type="text" maxlen=32 id="gccoptions" value="-std=c11 -Wall" /><button type='button' onclick= "RunCode(GetCodeText(),document.getElementById('gccoptions').value);return false;" >Compile and run</button>
+        <span style="margin: 0 5px 0 5px" id="gcc-compile-status"></span>
+        <span style="margin: 0 5px 0 5px">Errors: <span id="gcc-error-count">0</span> Warnings: <span id="gcc-warning-count">0</span></span>
+        Theme<select onchange='editor.setTheme("ace/theme/"+this.options[this.selectedIndex].value)'>
+            <option value="monokai">monokai</option>
+            <option value="terminal">terminal</option>
+            <option value="tomorrow">tomorrow</option>
+            <option value="xcode">xcode</option>
+        </select>
+    </div>
+
+    <div class="col-md-6" style="height: 100%">
+        <div style="overflow-x: auto;width:100%;height: 100%" >
+            <table id="tty" class="terminal" cellpadding="0" cellspacing="0">
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+                                                                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div><!-- /.box -->
+                    </section><!-- /.end of main content -->
+                    <section class="col-lg-3">
+                                                                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="box">
+                                    <div class="box-header">
+                                        <h3 class="box-title"><i class="fa fa-info"></i> Information</h3>
+                                    </div><!-- /.box-header -->
+                                    <div class="box-body">
+                                        <dl class="dl-horizontal sm">
+                                            <dt>Time Limit</dt>
+                                            <dd>1 Second</dd>
+                                            <dt>Memory Limit</dt>
+                                            <dd>32 MB</dd>
+                                            <dt>Language</dt>
+                                            <dd>c</dd>
+                                            <dt>Deadline</dt>
+                                            <dd>Future Life</dd>
+                                            <dt>Submission Limit</dt>
+                                            <dd><span class="label label-info">Unlimit</span></dd>
+                                            <dt>Restrict Word</dt>
+                                            <dd><span class="label label-info"
+                                                                                                >No Restrict</span></dd>
+                                            <dt>Required Word</dt>
+                                            <dd><span class="label label-info"
+                                                                                                      >No Restrict</span></dd>
+                                            <dt>Testcase</dt>
+                                            <dd>3 case</dd>
+                                            <dt>Rejudge Testcase</dt>
+                                            <dd>0 case</dd>
+                                            <dt>Full Score</dt>
+                                            <dd>100 Point</dd>
+                                            <dt>Bonus Score</dt>
+                                            <dd>0</dd>
+                                            <dt>Your Score</dt>
+                                            <dd>
+                                                                                            N/A
+                                                                                        </dd>
+                                        </dl>
+                                    </div><!-- /.box-body -->
+                                </div><!-- /.box -->
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="box">
+                                    <div class="box-header">
+                                        <h3 class="box-title"><i class="fa fa-cloud-upload"></i> Submit File</h3>
+                                    </div><!-- /.box-header -->
+                                    <div class="box-body">
+                                        <form method="POST" action="https://ejudge.it.kmitl.ac.th/problem/4330/send" accept-charset="UTF-8" enctype="multipart/form-data"><input name="_token" type="hidden" value="ZFmOw7B3RWtIm5LnqXrN58ZNWiwn81AzXqFHTBL8">
+                                            <div class="form-group">
+                                                <input type="file" id="file" name="file" class="form-control file">
+                                            </div>
+                                            <input type="hidden" id="codesubmmit" name="code" class="form-control">
+                                            <input type="hidden" id="langsubmmit" name="lang" class="form-control">
+                                            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                                        </form>
+                                    </div><!-- /.box-body -->
+                                </div><!-- /.box -->
+                            </div>
+                        </div>
+                    </section>
+                    				</section>
+			</aside><!-- /.right-side -->
+		</div><!-- ./wrapper -->
+
+	        <script src="https://ejudge.it.kmitl.ac.th/assets/js/bootstrap.min.js" type="text/javascript"></script>
+                
+    
+    <script src="https://ejudge.it.kmitl.ac.th/assets/jor1k/demos/ace-editor-src-min-noconflict/ace.js"></script>
+    <script src="https://ejudge.it.kmitl.ac.th/assets/jor1k/demos/jor1k-master-min.js"></script>
+    <script>
+
+        $('.btn-judge-c').click(function () {
+            var code = editor.getValue();
+            $('#codesubmmit').val(code);
+            $('#langsubmmit').val('c');
+            $("form").submit();
+        });
+
+        var Jor1k = require("Jor1k");
+        var LinuxTerm = require("LinuxTerm");
+
+        function CreateEditor()
+        {
+            editor = ace.edit("code");
+            editor.setTheme("ace/theme/monokai");
+            editor.getSession().setNewLineMode("unix");
+            editor.getSession().setMode("ace/mode/c_cpp");
+
+            var lastCode = localStorage.getItem('c'+655);
+            if(!lastCode){
+                lastCode = `//Enter your code here`;
+            }
+            editor.setValue(lastCode);
+        }
+
+        function OnUploadFiles(files)
+        {
+            for (var i = 0, f; f = files[i]; i++) {
+                jor1kgui.fs.UploadExternalFile(f);
+            }
+        }
+
+        function Start() {
+            CreateEditor();
+
+            var term = new LinuxTerm("tty");   // canvas id for the terminal
+
+            jor1kparameters = {
+                system: {
+                    kernelURL: "vmlinux.bin.bz2", // kernel image
+                    memorysize: 32, // in MB, must be a power of two
+                    cpu: "asm", // short name for the cpu to use
+                    ncores: 1,
+                },
+
+                fs: {
+                    basefsURL: "basefs-compile.json", // json file with the basic filesystem configuration.
+                    extendedfsURL: "../fs.json", // json file with extended filesystem informations. Loaded after the basic filesystem has been loaded.
+                    earlyload: [
+                        "usr/bin/gcc",
+                        "usr/libexec/gcc/or1k-linux-musl/4.9.0/cc1",
+                        "usr/libexec/gcc/or1k-linux-musl/4.9.0/collect2",
+                        "usr/lib/libbfd-2.24.51.20140817.so",
+                        "usr/lib/gcc/or1k-linux-musl/4.9.0/libgcc.a",
+                        "usr/bin/as",
+                        "usr/include/stdio.h"
+                    ], // list of files which should be loaded immediately after they appear in the filesystem
+                    lazyloadimages: [
+                    ] // list of automatically loaded images after the basic filesystem has been loaded
+                },
+                term: term,
+                clipboardid: "clipboard",  // input id for the clipboard
+                statsid: "stats",  // object id for the statistics test
+                relayURL: "", // relay url for the network
+                fps: 10, // update interval of framebuffer
+                memorysize: 32, // in MB, must be a power of two
+                path: "../sys/or1k/",
+            }
+
+            // --------------------------------------------------------
+            // parse URL
+            var loc = document.URL.split('?');
+            if (loc[1]) {
+                var params = loc[1].split('&');
+                for(var i=0; i<params.length; i++) {
+                    if (params[i].substr(0,3) == "cpu") {
+                        jor1kparameters.system.cpu = params[i].split('=')[1];
+                        if (jor1kparameters.system.cpu == "smp") {
+                            console.log("Load smp kernel");
+                            jor1kparameters.system.kernelURL = "vmlinuxsmp.bin.bz2";
+                            jor1kparameters.system.ncores = 4;
+                        }
+                    }
+                    if (params[i].substr(0,1) == "n") {
+                        jor1kparameters.system.ncores = params[i].split('=')[1];
+                    }
+                }
+            }
+
+
+
+            // --------------------------------------------------------
+
+            jor1kgui = new Jor1k(jor1kparameters);
+            term.SetCharReceiveListener(terminalPutCharListener);
+
+        }
+
+        var term_output = "";
+        var gcc_output;
+        var gcc_output_capture_re = /###GCC_COMPILE###\s*([\S\s]*?)\s*###GCC_COMPILE_FINISHED###/;
+        var gcc_exit_code_capture_re = /GCC_EXIT_CODE: (\d+)/;
+
+        var waitingForActivate = true;
+        function terminalPutCharListener(c) {
+            term_output = term_output + c;
+            if(term_output.indexOf('login on') > -1){
+                SendKeysToJor1k("clear\n");
+                term_output = "";
+            }
+        }
+
+        function waitForGccCompletion() {
+            var regex_match_array = gcc_output_capture_re.exec(term_output);
+            var gcc_exit_code, errorAnnotations;
+            var warnings_errors_info_count = {
+                error: 0,
+                warning: 0,
+                info: 0
+            };
+
+            if (regex_match_array !== null) {
+                gcc_output = regex_match_array[1];
+                gcc_exit_code = parseInt(gcc_exit_code_capture_re.exec(gcc_output)[1]);
+                SendKeysToJor1k("clear\n");
+                errorAnnotations = getErrorAnnotations(gcc_output);
+                editor.getSession().setAnnotations(errorAnnotations);
+                errorAnnotations.forEach(function (errorAnnotation) {
+                    warnings_errors_info_count[errorAnnotation.type] += 1;
+                });
+
+                document.getElementById('gcc-error-count').innerHTML = warnings_errors_info_count.error.toString();
+                document.getElementById('gcc-warning-count').innerHTML = warnings_errors_info_count.warning.toString();
+
+                if (gcc_exit_code === 0) {
+                    if (warnings_errors_info_count.warning > 0) {
+                        document.getElementById('gcc-compile-status').innerHTML = '<span><a href="#" style="color: darkgoldenrod" onclick="alert(gcc_output); return false;">SUCCESSFUL WITH WARNINGS</a></span>';
+                    }
+                    else {
+                        document.getElementById('gcc-compile-status').innerHTML = '<span style="color: green">SUCCESS</span>';
+                    }
+                    SendKeysToJor1k("./program\n");
+                }
+                else {
+                    document.getElementById('gcc-compile-status').innerHTML = '<span><a href="#" style="color: red" onclick="alert(gcc_output); return false;">FAILED</a></span>';
+                }
+            }
+            else {
+                // output is not ready yet
+                document.getElementById('gcc-compile-status').innerHTML = '<span style="color: gray">COMPILING</span>';
+                setTimeout(waitForGccCompletion, 1000);
+            }
+        }
+
+        var gcc_output_parse_re = /(?:prog\.c|gcc|collect2):\s*(.+)\s*:\s*(.+)\s*/;
+        var gcc_row_col_type_parse_re = /(\d+):(\d+):\s*(.+)/;
+        var gcc_output_type_text_split_re = /\s*(.+)\s*:\s*(.+)\s*/;
+        function getErrorAnnotations(gcc_output_str) {
+            var match, line_col_type_match, type_text_split_match, row, col, gcc_error_type, ace_annotation_type, text, errors = [];
+            gcc_output_str.split("\n").forEach(function (error_line) {
+                if(match = gcc_output_parse_re.exec(error_line)) {
+                    if (line_col_type_match = gcc_row_col_type_parse_re.exec(match[1])) {
+                        row = line_col_type_match[1] - 1; // line numbers in ace start from zero
+                        col = line_col_type_match[2];
+                        if (type_text_split_match = gcc_output_type_text_split_re.exec(line_col_type_match[3])) {
+                            gcc_error_type = type_text_split_match[1];
+                            text = type_text_split_match[2] + ": " + match[2];
+                        } else {
+                            gcc_error_type = line_col_type_match[3];
+                            text = match[2];
+                        }
+                    } else {
+                        // some gcc output without line info
+                        row = col = 0;
+                        if (type_text_split_match = gcc_output_type_text_split_re.exec(match[1])) {
+                            gcc_error_type = type_text_split_match[1];
+                            text = type_text_split_match[2] + ": " + match[2];
+                        } else {
+                            gcc_error_type = match[1];
+                            text = match[2];
+                        }
+                    }
+
+                    // Determine the type of editor annotation. ace supports error, warning or info.
+                    // This annotation type is also used to determine success of the compilation process.
+                    if (gcc_error_type.toLowerCase().indexOf("error") !== -1) {
+                        ace_annotation_type = "error";
+                    } else if (gcc_error_type.toLowerCase().indexOf("warning") !== -1) {
+                        ace_annotation_type = "warning";
+                    } else {
+                        ace_annotation_type = "info";
+                    }
+
+                    errors.push({
+                        row: row,
+                        column: col,
+                        type: ace_annotation_type,
+                        text: text
+                    });
+                }
+            });
+            return errors;
+        }
+
+        function GetCodeText() {
+            //return document.getElementById('code').value; // textarea
+            return editor.getSession().getValue(); //ace
+        }
+
+        function SendKeysToJor1k(text,quiet) {
+            var tty = quiet ? "tty1" : "tty0";
+            for(var i=0;i<text.length;i++) {
+                jor1kgui.message.Send(tty, [text.charCodeAt(i) >>>0]);
+            }
+        }
+
+        function RunCode(code,gccoptions) {
+            if(code.length ===0 || code.indexOf("\x03") >= 0 || code.indexOf("\x04") >= 0 ) return;
+
+            jor1kgui.Pause(false);
+            localStorage.setItem('c'+655, code);
+            // wakeup tty0
+            SendKeysToJor1k("\x03\n\nstty -clocal\nstty crtscts\nstty -ixoff\n",false);
+            // wakeup hidden tty1
+            //tty1-unusedfornow SendKeysToJor1k("\x03\n",true);
+
+            //SendKeysToJor1k("cd ~;rm prog.c program 2>/dev/null\n");
+            var bufView = new Uint8Array(code.length);
+            for (var i=0; i<code.length; i++) {
+                bufView[i] = code.charCodeAt(i);
+            }
+            jor1kgui.message.Send("MergeFile", {name: "home/user/prog.c", data: bufView});
+
+            var lang = document.getElementById("lang").value;
+            if(lang == "c_cpp"){
+                // For now we want gcc output to be viewable, so this goes on the main terminal
+                // To use tty1 we would need to synchronize gcc i.e. wait for prog.c upload
+
+                // not-reliable SendKeysToJor1k("stty echo\n\nclear\n");
+                term_output = "";
+                SendKeysToJor1k("echo \\#\\#\\#GCC_COMPILE\\#\\#\\#;clear;gcc " + gccoptions + " prog.c -o program; echo GCC_EXIT_CODE: $?; echo \\#\\#\\#GCC_COMPILE_FINISHED\\#\\#\\#;clear\n");
+                waitForGccCompletion();
+            } else {
+                document.getElementById('gcc-compile-status').innerHTML = "";
+                SendKeysToJor1k("mv prog.c prog\nclear\n" + lang + " prog\n");
+            }
+        }
+
+        Start()
+    </script>
+        <script src="https://ejudge.it.kmitl.ac.th/assets/js/AdminLTE/app.js" type="text/javascript"></script>
+
+
+        <script type="text/javascript">
+            var now = new Date(1550199748000);
+            function startInterval(){
+                setInterval('updateTime();', 1000);
+            }
+            startInterval();
+            function updateTime(){
+                var nowMS = now.getTime();
+                nowMS += 1000;
+                now.setTime(nowMS);
+                var clock = document.getElementById('clock');
+                if(clock){
+                    clock.innerHTML = now.toTimeString().split(" ",1);
+                }
+            }
+        </script>
+                
+		</body>
+</html>
