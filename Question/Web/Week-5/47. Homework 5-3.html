@@ -840,7 +840,7 @@
             jor1kgui.Pause(false);
             localStorage.setItem('c'+1182, code);
             // wakeup tty0
-            SendKeysToJor1k("\x03\n\nstty -clocal\nstty crtscts\nstty -ixoff\n",false);
+            SendKeysToJor1k("\x03\nstty -clocal\nstty crtscts\nstty -ixoff\n",false);
             // wakeup hidden tty1
             //tty1-unusedfornow SendKeysToJor1k("\x03\n",true);
 
@@ -856,7 +856,7 @@
                 // For now we want gcc output to be viewable, so this goes on the main terminal
                 // To use tty1 we would need to synchronize gcc i.e. wait for prog.c upload
 
-                // not-reliable SendKeysToJor1k("stty echo\n\nclear\n");
+                // not-reliable SendKeysToJor1k("stty echo\nclear\n");
                 term_output = "";
                 SendKeysToJor1k("echo \\#\\#\\#GCC_COMPILE\\#\\#\\#;clear;gcc " + gccoptions + " prog.c -o program; echo GCC_EXIT_CODE: $?; echo \\#\\#\\#GCC_COMPILE_FINISHED\\#\\#\\#;clear\n");
                 waitForGccCompletion();
